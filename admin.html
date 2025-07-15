@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Account</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./master.css" /> -->
+</head>
+
+<body class="bg-light">
+  <div class="container py-5">
+    <h2 class="mb-4">Master Admin Dashboard</h2>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Master Account Balance</h5>
+        <h3 id="masterBalance">₦0.00</h3>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Credit a User</h5>
+        <form id="masterTransferForm">
+          <div class="mb-3">
+            <label for="recipientAcct" class="form-label">Recipient Account Number</label>
+            <input type="text" class="form-control" id="recipientAcct" required>
+            <div id="acctNameResult" class="small mt-1 fw-bold"></div>
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label">Amount (₦)</label>
+            <input type="number" class="form-control" id="amount" required>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" placeholder="e.g. Welcome Bonus" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Transaction Log</h5>
+        <ul id="txList" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="toast" class="toast align-items-center text-white bg-success border-0 position-fixed bottom-0 end-0 m-4"
+    role="alert" aria-live="assertive" aria-atomic="true" style="display:none; z-index:1055;">
+    <div class="d-flex">
+      <div class="toast-body" id="toastMessage"></div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" onclick="hideToast()"
+        aria-label="Close"></button>
+    </div>
+  </div>
+
+  <!-- PIN Modal -->
+<div class="modal fade" id="pinModal" tabindex="-1" aria-labelledby="pinModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pinModalLabel">Enter Transaction PIN</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="pinForm">
+          <div class="mb-3">
+            <label for="pinInput" class="form-label">Transaction PIN</label>
+            <input type="password" id="pinInput" class="form-control" maxlength="4" required />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Continue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./admin.js" type="module"></script>
+</body>
+
+</html>

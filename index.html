@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexter.Fi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg py-3 px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./dexter.png" alt="Dexter.Fi" width="80">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dexterNav"
+                aria-controls="dexterNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="dexterNav">
+                <ul class="navbar-nav mb-2 mb-lg-0 gap-3 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-dark active border-bottom border-primary"
+                            href="#">Personal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-dark" href="#">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-dark" href="#">Company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-dark" href="#">Help</a>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary text-white" onclick="window.location.href='./signup.html'">Become
+                            a customer</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-outline-primary" onclick="window.location.href='./login.html'">Sign
+                            In</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Risk Level Section -->
+    <!-- <section class="risk-section mx-auto mt-4">
+        <div
+            class="border rounded shadow-sm p-4 d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+            <div>
+                <h2 class="text-primary display-6 mb-0">1 <small>/6</small></h2>
+                <p class="text-muted mt-1">This number indicates the product risk, with 1 / 6 representing the lowest
+                    risk and 6 / 6 representing the highest risk.</p>
+            </div>
+            <div>
+                <p class="text-muted">
+                    BBVA is affiliated with Spain's Deposit Guarantee Fund for Credit Institutions.
+                    The maximum amount guaranteed is €100,000 per person for the total of all deposits established at
+                    BBVA.
+                </p>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="hero mt-5 shadow-lg">
+        <div class="hero-left">
+            <p class="fw-bold tag2"
+                style="background-color: rgb(242, 236, 228); border-radius: 6px; width: 65%; text-align: center;">
+                Fee-Free Online Account
+            </p>
+            <h1>The money app<br>for Everyone.</h1>
+            <p>Earn money for what you do every day with an account: send a Bizum, shop with the card, pay a bill or
+                receive your paycheck. <span class="fw-bold" style="color:rgb(88, 52, 125)">The more you use it, the
+                    more you earn with
+                    Dexter.Fi!</span>
+            </p>
+            <div class="store-buttons">
+                <img src="appstore.png" alt="App Store" width="50">
+                <img src="playstore.png" alt="Google Play" width="50">
+            </div>
+            <div class="certs">
+
+
+                <p>Fully Licensed by the CBN</p>
+                <p>Deposits Insured by <img src="./ndic.png" alt="NDIC" width="120"></p>
+
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn  onclick=" window.location.href='./signup.html' style=" background-color: rgb(88, 52,
+                    125);; border:2px solid rgb(252, 252, 252); color:rgb(250, 247, 252);font-size: 17px; ">Become a
+                    customer</button>
+
+                <button class=" btn " onclick=" window.location.href='./login.html'"
+                    style=" background-color: rgb(88, 52,
+                    125); border:2px solid rgb(255, 255, 255); border-radius: 5px; color: rgb(240, 239, 241); font-size: 17px;">Sign In</button>
+                <i class="bi bi-search fs-5"></i>
+                <i class="bi bi-list fs-3"></i>
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+            <div class="orbit-circle">
+                <!-- Trajectory rings -->
+                <div class="path1"></div>
+                <div class="path2"></div>
+                <div class="path3"></div>
+                <div class="path4"></div>
+
+                <!-- Static phone and card -->
+                <img src="phone.png" class="main-phone" />
+                <img src="card.png" class="main-card" />
+
+                <!-- Orbiting Icons -->
+                <img src="icon1.png" class="orbit-icon icon1" />
+                <img src="icon2.png" class="orbit-icon icon2" />
+                <img src="icon3.png" class="orbit-icon icon3" />
+                <img src="icon4.png" class="orbit-icon icon4" />
+            </div>
+        </div>
+    </section>
+
+    <section class="needs">
+        <h2>What do you need?</h2>
+
+        <section class="features-grid">
+            <div class="grid-item">
+                <img src="./zero.png" alt="Feature 1">
+                <p>An Account free <br> of fees</p>
+            </div>
+            <div class="grid-item">
+                <img src="./paycheck.png" alt="Feature 2">
+                <br>
+                <br><br>
+                <p>An Account for my paycheck</p>
+            </div>
+            <div class="grid-item">
+                <img src="./company.png" alt="Feature 3" style="margin: 20px;">
+                <p class="mt-4">An Account for my Company</p>
+            </div>
+            <div class="grid-item">
+                <img src="./airplane.png" alt="Feature 4" style="margin: 30px;">
+                <p class="mt-5">An Account for young people to travel</p>
+            </div>
+            <div class="grid-item">
+                <img src="./mort.jpg" alt="Feature 5" style="margin: 23px" ;>
+                <p>Calculate my<br> mortgage</p>
+            </div>
+            <div class="grid-item">
+                <img src="./kids (2).png" alt="Feature 6" style="margin: 23px">
+                <p>An Account for my Son or Daughter</p>
+            </div>
+        </section>
+
+        <section class="priviledge">
+            <div class="damn">
+            <h2>Dexter.Fi makes it easy for you</h2>
+            <p>You will have the Fee-Free Online Account and your Aqua Debit Cards for ₦0.00, with these benefits from
+                day one.</p>
+                </div>
+
+            <section class="features-section">
+                <div class="feature-card">
+                    <img src="./dog.avif" alt="Begin effortlessly">
+                    <h3>Begin effortlessly</h3>
+                    <p>If you want, we will transfer over any accounts or income you have at other banks.</p>
+                </div>
+
+                <div class="feature-card">
+                    <img src="./atm.avif" alt="Withdraw cash at no cost">
+                    <h3>Withdraw cash at no cost</h3>
+                    <p>There are no fees to withdraw money from ATMs, and you can also save when you travel.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <img src="./itel.avif" alt="Send or receive money instantly">
+                    <h3>Send or receive money instantly</h3>
+                    <p>You have the most complete Bizum and you can make instant transfers at no cost.</p>
+                </div>
+            </section>
+
+        </section>
+
+    </section>
+
+    <section class="save-section">
+        <div class="save-text">
+            <h2>Save money as you<br>spend it, seriously.</h2>
+            <p>You can’t avoid spending. That’s how you pay for your needs. But we can help you put money away every
+                time you pay for something. Just set a percentage to save and watch your money grow.</p>
+            <a href="#" class="save-link">See all our Savings →</a>
+        </div>
+
+        <div class="save-image">
+            <img src="./spend.png" alt="Spend and Save">
+        </div>
+    </section>
+
+    <section class="coach-section shadow-lg">
+        <div class="coach-left">
+            <span class="tag fw-bold" style="color:rgb(88, 52, 125)">Financial coach</span>
+            <h2>Get your finances <span>in shape</span></h2>
+            <p>With the help of artificial intelligence, we analyze your situation and support you in reaching your
+                goal, as if you had a personal trainer by your side.</p>
+            <div class="buttons">
+                <button class="primary">Become a customer</button>
+                <button class="secondary">Go to Financial Coach</button>
+            </div>
+        </div>
+        <div class="coach-right">
+            <img src="./save.avif" alt="Savings Progress Demo" />
+        </div>
+    </section>
+
+
+    <section class="help-section">
+        <div class="save-text">
+            <h2>We’re always happy to <br> help you.</h2>
+            <p>You can chat with us on the app, slide into our DMs, tweet, leave an Instagram comment, send an email or
+                call. However you choose to reach out, there’ll always be a friendly person there to make your life
+                easy.</p>
+            <a href="#" class="save-link">Get Help →</a>
+        </div>
+
+        <div class="save-image">
+            <img src="./help.png" alt="Spend and Save">
+        </div>
+    </section>
+
+    <section class="coach-section shadow-lg">
+        <div class="coach-left">
+            <h2>What if we get to know each other a little better?</h2>
+            <p>Sign up and explore the Dexter.Fi app without being a customer. This way you can get to know us, with no
+                commitment.</p>
+            <div class="buttons">
+                <button class="primary">Register</button>
+                <button class="secondary">Go to Financial Coach</button>
+            </div>
+        </div>
+        <div class="coach-right">
+            <img src="./extra.avif" alt="Savings Progress Demo" />
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2 class="section-title fw-bold">Don’t just take our word for it</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-track">
+                <div class="testimonial-card">
+                    <img src="witness1.webp" alt="Amanda O." class="testimonial-img">
+                    <p>“Dexter.Fi has completely changed how I handle my finances.”</p>
+                    <h4>Amanda Sanyeri.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="slot.jpeg" alt="Joshua M." class="testimonial-img">
+                    <p>“Smooth experience, easy transfers, and smart saving tips.”</p>
+                    <h4>Dejo Joshua </h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="iffy.jpg" alt="Ifeanyi K." class="testimonial-img">
+                    <p>“I saved ₦150,000 in 2 months thanks to <span style="color: rgb(88, 52, 125);">Dexter</span></p>
+                    <h4>Ifeanyi K.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="./woman2.jpg" alt="Blessing A." class="testimonial-img">
+                    <p>“I use it every day. It’s like having a smart bank buddy.”</p>
+                    <h4>Blessing A.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="./french.jpeg" alt="Blessing A." class="testimonial-img">
+                    <p>“Making transactions when i'm not in m home country has been seamless”</p>
+                    <h4>Enrique Valdez.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

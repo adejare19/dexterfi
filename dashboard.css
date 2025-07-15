@@ -1,0 +1,87 @@
+  body {
+            background-color: #f3f3f3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #1e1e2f;
+            color: #f1f1f1;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background-color: #fff;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+        }
+
+        .dark-mode .sidebar {
+            background-color: #2a2a3d;
+            border-color: #444;
+        }
+
+        .sidebar .nav-link {
+            color: #3a1d56;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .dark-mode .sidebar .nav-link {
+            color: #ddd;
+        }
+
+        .sidebar .nav-link.active {
+            background-color: #ddd0f3;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .main {
+            padding: 30px;
+        }
+
+        .balance-card,
+        .budget-card,
+        .card-section,
+        .right-pane {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dark-mode .balance-card,
+        .dark-mode .budget-card,
+        .dark-mode .card-section,
+        .dark-mode .right-pane {
+            background-color: #2f2f44;
+        }
+
+        .transaction-table th,
+        .transaction-table td {
+            font-size: 14px;
+        }
+
+        .payment-option {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dark-mode .payment-option {
+            border-color: #444;
+        }
+
+        .payment-option:hover {
+            background-color: #f9f9f9;
+        }
+
+        .dark-mode .payment-option:hover {
+            background-color: #3a3a55;
+            color: white;
+        }

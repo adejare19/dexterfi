@@ -1,0 +1,93 @@
+body {
+    background-image: url('./kudaglobe.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.alert {
+    font-size: 13px;
+}
+
+.box-up {
+    margin-top: 150px;
+    margin-left: 19%;
+}
+
+.collector {
+    width: 350px;
+    margin-right: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: rgb(88, 52, 125);
+    color: white;
+
+}
+.btn:hover {
+     text-decoration: none;
+    color: white;
+    background-color: rgb(88, 52, 125);
+}
+
+#loginBtn {
+    background-color: rgb(88, 52, 125);
+    color: white;
+}
+
+.sigup-btn {
+    background-color: rgb(88, 52, 125);
+    color: white;
+    width: 100%;
+}
+
+.sigup-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    padding: 0 13%;
+    height: 8vh;
+}
+
+.SignUpBtn {
+    background-color: #EFF1FF;
+    border: 1px solid rgb(72, 34, 109);
+    border-radius: 8px;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+
+}
+
+.container {
+    margin-top: -60px;
+}
+
+.container-sign {
+    margin-top: -80px;
+}
+
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.exp {
+    text-align: center;
+    align-items: center;
+}
