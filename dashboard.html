@@ -16,20 +16,15 @@
 
 
             <div class="col-md-2 sidebar">
-                <h4 class="mb-4 fw-bold text-primary"><img src="./kkk.png" alt="Kuda Logo" width="22" height="17"
+                <h4 class="mb-4 fw-bold text-primary"><img src="./dexter.png" alt="Dexter.fi" width="80" height="60"
                         class="me-1" />
-                    <span class="fw-bold kuda-text" style="color: rgb(58, 29, 86);">Kuda</span>
+                    
                 </h4>
                 <a href="#" class="nav-link active"><i class="fas fa-home me-2"></i>Home</a>
 
 
-                
-                <div class="payment-option" data-bs-toggle="modal" data-bs-target="#profileModal"
-                    style="cursor: pointer;">
-                    <span><i class="fas fa-user me-2"></i>Send Money</span>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
 
+                <a href="#" class="nav-link"><i class="fas fa-user me-2"></i>Profile</a>
 
                 <a href="#" class="nav-link"><i class="fas fa-credit-card me-2"></i>Cards</a>
                 <a href="#" class="nav-link"><i class="fas fa-cog me-2"></i>Settings</a>
@@ -41,13 +36,13 @@
 
             <div class="col-md-7 main">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div>
+                    <div id="userolt">
                         <h5 id="displayName" class="fw-bold"></h5>
                         <h5>Acct No: <span id="acctNumber"></span></h5>
 
                     </div>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-outline-primary"><i class="fas fa-plus me-1"></i> Add Money</button>
+                        <button class="btn text-white" style="background-color:rgb(88, 52, 125)"><i class="fas fa-plus me-1"></i> Add Money</button>
                         <button class="btn btn-outline-secondary" onclick="toggleDarkMode()" title="Toggle Dark Mode">
                             <i class="fas fa-moon"></i>
                         </button>
@@ -57,8 +52,8 @@
                 <!-- Cards Row -->
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="balance-card">
-                            <h6 class="text-muted">Account Balance</h6>
+                        <div class="balance-card" style="border: 2px solid rgb(88, 52, 125);">
+                            <h6  id="bal">Account Balance</h6>
                             <h3 id="accountBalance" class="fw-bold">₦0.00</h3>
 
                             <div class="d-flex justify-content-between mt-3">
@@ -75,9 +70,9 @@
 
                     <div class="col-md-6">
                         <div class="budget-card">
-                            <h6 class="text-muted">Budget</h6>
+                            <h6 class="">Budget</h6>
                             <p><strong>₦1,051,950</strong> Balance / <strong>₦250,000</strong> Budgeted</p>
-                            <p class="text-muted small">You're doing great! <br> You can spend ₦8604/day till end of
+                            <p class=" small">You're doing great! <br> You can spend ₦8604/day till end of
                                 month.</p>
                             <div class="progress">
                                 <div class="progress-bar bg-success" style="width: 54%">54%</div>
@@ -100,7 +95,7 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Method</th>
+                                <th>Type</th>
                                 <th>Date</th>
                                 <th>Time</th>
                                 <th>Description</th>
@@ -118,13 +113,14 @@
             <!-- Right Pane -->
             <div class="col-md-3 right-pane">
                 <div class="mb-4">
-                    <img src="./kuda_card.jpg" class="img-fluid rounded" alt="Kuda Card" />
+                    <img src="./ol.png" class="img-fluid rounded atm-card" alt="dexter Card"/>
                 </div>
 
-                <button class="btn btn-outline-primary w-100 mb-3">Request A Card</button>
+                <button class="btn text-white mb-3 w-100"  data-bs-toggle="modal" data-bs-target="#requestCard"
+                    style="cursor: pointer; background-color: rgb(88, 52, 125);">Request A Card</button>
 
                 <div class="payment-option">
-                    <span><i class="fas fa-user-friends me-2"></i>Friends on Kuda</span>
+                    <span><i class="fas fa-user-friends me-2"></i>Friends on Dexter.fi</span>
                     <button class="btn btn-sm btn-light">Connect</button>
                 </div>
                 <div class="payment-option" data-bs-toggle="modal" data-bs-target="#transferModal"
@@ -133,15 +129,16 @@
                     <i class="fas fa-chevron-right"></i>
                 </div>
 
-                <div class="payment-option">
+                <div class="payment-option" data-bs-toggle="modal" data-bs-target="#airtimeModal">
                     <span><i class="fas fa-phone me-2"></i>Buy Airtime</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>
-                <div class="payment-option">
+                <div class="payment-option" data-bs-toggle="modal" data-bs-target="#billsModal">
                     <span><i class="fas fa-file-invoice me-2"></i>Pay A Bill</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>
-                <div class="payment-option">
+                
+                <div class="payment-option" data-bs-toggle="modal" data-bs-target="#webPayModal">
                     <span><i class="fas fa-globe me-2"></i>Web Payment</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>
@@ -149,6 +146,8 @@
 
         </div>
     </div>
+
+  
 
 
 
@@ -201,9 +200,6 @@
             </div>
         </div>
     </div>
-
-    <!-- profilePage -->
-     <!-- Transfer page -->
     <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="transferModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
@@ -241,6 +237,134 @@
             </div>
         </div>
     </div>
+
+    <!-- Buy Airtime Modal -->
+    <div class="modal fade" id="airtimeModal" tabindex="-1" aria-labelledby="airtimeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h5 class="modal-title">Buy Airtime</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="airtimeForm">
+                        <div class="mb-3">
+                            <label for="network" class="form-label">Select Network</label>
+                            <select class="form-select" id="network">
+                                <option value="">Choose...</option>
+                                <option value="MTN">MTN</option>
+                                <option value="Airtel">Airtel</option>
+                                <option value="Glo">Glo</option>
+                                <option value="9mobile">9mobile</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Amount (₦)</label>
+                            <input type="number" class="form-control" id="amount" placeholder="e.g. 500">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="e.g. 08012345678">
+                        </div>
+                        <button type="button" class="btn  w-100 secondary text-white" style="background-color:rgb(88, 52, 125)" disabled>Send </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Web Payment Modal -->
+    <div class="modal fade" id="webPayModal" tabindex="-1" aria-labelledby="webPayModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h5 class="modal-title">Web Payment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="webPayForm">
+                        <div class="mb-3">
+                            <label for="webDesc" class="form-label">Payment Description</label>
+                            <input type="text" class="form-control" id="webDesc"
+                                placeholder="e.g. Netflix Subscription">
+                        </div>
+                        <div class="mb-3">
+                            <label for="webAmount" class="form-label">Amount (₦)</label>
+                            <input type="number" class="form-control" id="webAmount">
+                        </div>
+                        <button type="button" class="btn  w-100 secondary text-white" style="background-color:rgb(88, 52, 125)" disabled>Pay Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bill Payment Modal -->
+    <div class="modal fade" id="billsModal" tabindex="-1" aria-labelledby="billsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pay Bills</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="billsForm">
+                        <div class="mb-3">
+                            <label for="billType" class="form-label">Bill Type</label>
+                            <select class="form-select" id="billType">
+                                <option value="">Choose...</option>
+                                <option value="Electricity">Electricity</option>
+                                <option value="DSTV">DSTV</option>
+                                <option value="Water">Water</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="billAmount" class="form-label">Amount (₦)</label>
+                            <input type="number" class="form-control" id="billAmount">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerID" class="form-label">Customer ID</label>
+                            <input type="text" class="form-control" id="customerID">
+                        </div>
+                        <button type="button" class="btn  w-100 secondary text-white" style="background-color:rgb(88, 52, 125)" disabled>Pay Bill</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request ATM Card  -->
+     <div class="modal fade" id="requestCard" tabindex="-1" aria-labelledby="billsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h5 class="modal-title">ATM Card Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="billsForm">
+                        <div class="mb-3">
+                            <label for="cardType" class="form-label">Card Type</label>
+                            <select class="form-select" id="cardType">
+                                <option value="">Choose...</option>
+                                <option value="visa">Visa</option>
+                                <option value="verve">Verve</option>
+                               <option value="mastercard">Mastercard</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Name on Card</label>
+                            <input type="text" class="form-control" id="customerID">
+                        </div>
+                        <button type="button" class="btn  w-100 secondary text-white" style="background-color:rgb(88, 52, 125)" disabled>Request Card</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
     <!-- Toast Notification -->

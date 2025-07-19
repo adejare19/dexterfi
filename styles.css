@@ -91,3 +91,15 @@ a {
     text-align: center;
     align-items: center;
 }
+@media (max-width: 992px) {
+    .container{
+        margin: auto;
+        justify-content:center;
+        margin-left: 30px;
+        margin-top: 70px;
+    } 
+    .nav img{
+        width: 80%;
+        height: 40%;
+    }
+}

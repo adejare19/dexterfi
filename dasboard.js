@@ -22,6 +22,7 @@ const db = getFirestore(app);
 onAuthStateChanged(auth, (user) => {
   if (user) {
     const docRef = doc(db, "users", user.uid);
+    
 
     // Listen for profile updates
     onSnapshot(docRef, (docSnap) => {

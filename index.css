@@ -696,3 +696,138 @@ button.secondary {
         font-size: 20px;
     }
 }
+.partners-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.partners-section h2 {
+  font-size: 28px;
+  color: #4b0082;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.partners-logos img {
+  max-height: 70px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.partners-logos img:hover {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .partners-section h2 {
+    font-size: 22px;
+  }
+
+  .partners-logos {
+    gap: 40px;
+  }
+
+  .partners-logos img {
+    max-height: 37px;
+  }
+}
+.footer {
+  background-color:rgb(88, 52, 125); 
+  color: white;
+  padding: 40px 20px;
+  border-radius: 20px 20px 0 0;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.footer-langs a,
+.footer-socials a,
+.footer-links a {
+  color: white;
+  margin-right: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-langs a:hover,
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-socials a i {
+  font-size: 20px;
+  background: white;
+  color: rgb(88, 52, 125);
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 10px;
+  /* transition: background 0.3s; */
+}
+
+.footer-socials a i:hover {
+  background: white;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  justify-content: center;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-langs,
+  .footer-socials {
+    margin-top: 15px;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

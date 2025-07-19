@@ -1,87 +1,171 @@
   body {
-            background-color: #f3f3f3;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
+      background-color: #f3f3f3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+  }
 
-        .dark-mode {
-            background-color: #1e1e2f;
-            color: #f1f1f1;
-        }
+  .dark-mode {
+      background-color: #1e1e2f;
+      color: #f1f1f1;
+  }
 
-        .sidebar {
-            height: 100vh;
-            background-color: #fff;
-            padding: 20px;
-            border-right: 1px solid #ccc;
-        }
+  .sidebar {
+      height: 100vh;
+      background-color: #fff;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      transition: all 0.3s ease-in-out;
+  }
 
-        .dark-mode .sidebar {
-            background-color: #2a2a3d;
-            border-color: #444;
-        }
+  .atm-card {
+      height: 20%;
+  }
 
-        .sidebar .nav-link {
-            color: #3a1d56;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
+  .dark-mode .sidebar {
+      background-color: #2a2a3d;
+      border-color: #444;
+  }
 
-        .dark-mode .sidebar .nav-link {
-            color: #ddd;
-        }
+  @media (max-width: 768px) {
+      .sidebar {
+          display: none;
+          position: absolute;
+          z-index: 1000;
+          top: 0;
+          left: 0;
+          width: 70%;
+          height: 100vh;
+          box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+      }
+  }
 
-        .sidebar .nav-link.active {
-            background-color: #ddd0f3;
-            border-radius: 8px;
-            padding: 10px;
-        }
+  .sidebar .nav-link {
+      color: #3a1d56;
+      font-weight: 500;
+      margin-bottom: 20px;
+  }
 
-        .main {
-            padding: 30px;
-        }
+  .dark-mode .sidebar .nav-link {
+      color: #ddd;
+  }
 
-        .balance-card,
-        .budget-card,
-        .card-section,
-        .right-pane {
-            background-color: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+  .sidebar .nav-link.active {
+      background-color: #ddd0f3;
+      border-radius: 8px;
+      padding: 10px;
+  }
 
-        .dark-mode .balance-card,
-        .dark-mode .budget-card,
-        .dark-mode .card-section,
-        .dark-mode .right-pane {
-            background-color: #2f2f44;
-        }
+  .dark-mode .sidebar .nav-link.active {
+      color: white;
+      background-color: #3a1d56;
+      border: 1px solid white;
+  }
 
-        .transaction-table th,
-        .transaction-table td {
-            font-size: 14px;
-        }
+  .dark-mode #bal #userolt {
+      color: white;
+      /* background-color: red; */
+  }
 
-        .payment-option {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 10px 15px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+  .main {
+      padding: 30px;
+  }
 
-        .dark-mode .payment-option {
-            border-color: #444;
-        }
+  .balance-card,
+  .budget-card,
+  .card-section,
+  .right-pane {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+  }
 
-        .payment-option:hover {
-            background-color: #f9f9f9;
-        }
+  .dark-mode .balance-card,
+  .dark-mode .budget-card,
+  .dark-mode .card-section,
+  .dark-mode .right-pane {
+      background-color: #2f2f44;
+  }
 
-        .dark-mode .payment-option:hover {
-            background-color: #3a3a55;
-            color: white;
-        }
+  .transaction-table th,
+  .transaction-table td {
+      font-size: 14px;
+  }
+
+  .right-pane {
+      color: rgb(88, 52, 125);
+      font-weight: bold;
+  }
+
+  .dark-mode .right-pane {
+      
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+      }
+  
+
+  .payment-option {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+  }
+
+
+  .dark-mode .payment-option {
+      border-color: #444;
+  }
+
+  .payment-option:hover {
+      background-color: #f9f9f9;
+  }
+
+  .dark-mode .payment-option:hover {
+      background-color: #3a3a55;
+      color: white;
+  }
+
+
+  @media (max-width: 768px) {
+
+
+      .main {
+          padding: 15px;
+      }
+
+      .balance-card,
+      .budget-card,
+      .card-section,
+      .right-pane {
+          padding: 15px;
+          margin-bottom: 15px;
+      }
+
+
+      .transaction-table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+      }
+
+      .transaction-table th,
+      .transaction-table td {
+          font-size: 13px;
+          padding: 8px;
+      }
+
+      .modal-dialog {
+          width: 95% !important;
+          margin: auto;
+      }
+
+      .btn,
+      .form-control {
+          font-size: 14px;
+      }
+  }
