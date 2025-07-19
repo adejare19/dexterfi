@@ -103,3 +103,18 @@ a {
         height: 40%;
     }
 }
+.kuda-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.overlay-box {
+   position: absolute;
+  top: 90px;
+  left: 12px;
+  width: 90px;  /* Adjust to fully cover logo */
+  height: 40px; /* Adjust height based on the logo size */
+  background-color: #fff;  /* Or match the background color */
+  border-top-left-radius: 15px;
+  z-index: 2;
+  background-color: white;
+}
