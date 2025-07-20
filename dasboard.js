@@ -22,7 +22,7 @@ const db = getFirestore(app);
 onAuthStateChanged(auth, (user) => {
   if (user) {
     const docRef = doc(db, "users", user.uid);
-    
+
 
     // Listen for profile updates
     onSnapshot(docRef, (docSnap) => {
@@ -76,7 +76,7 @@ onAuthStateChanged(auth, (user) => {
     });
 
   } else {
-    window.location.href = "./signin.html";
+    window.location.href = "./login.html";
   }
 });
 
